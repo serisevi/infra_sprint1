@@ -1,5 +1,5 @@
 server {
-    server_name taski-rissol.ddns.net;
+    server_name taski-serisevi.ddns.net;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8000;
@@ -16,15 +16,15 @@ server {
     }
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/taski-rissol.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/taski-rissol.ddns.net/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/taski-serisevi.ddns.net/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/taski-serisevi.ddns.net/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 }
 
 server {
-    server_name kittygram-rissol.ddns.net;
+    server_name kittygram-serisevi.ddns.net;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8080;
@@ -47,8 +47,8 @@ server {
     }
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/kittygram-rissol.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/kittygram-rissol.ddns.net/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/kittygram-serisevi.ddns.net/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/kittygram-serisevi.ddns.net/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -56,24 +56,24 @@ server {
 
 
 server {
-    if ($host = kittygram-rissol.ddns.net) {
+    if ($host = kittygram-serisevi.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
     listen 80;
-    server_name kittygram-rissol.ddns.net;
+    server_name kittygram-serisevi.ddns.net;
     return 404; # managed by Certbot
 
 
 }server {
-    if ($host = taski-rissol.ddns.net) {
+    if ($host = taski-serisevi.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
     listen 80;
-    server_name taski-rissol.ddns.net;
+    server_name taski-serisevi.ddns.net;
     return 404; # managed by Certbot
 
 
