@@ -1,0 +1,5 @@
+IP: 51.250.101.47;
+name_taski: https://taski-rissol.ddns.net/;
+name_kittygram: https://kittygram-rissol.ddns.net/;
+login: rissol;
+password: ilya2005;
